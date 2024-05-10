@@ -12,7 +12,7 @@ include 'views/template/header.php';
     <div class="moderation-reservation">
         <h1>MODIFIER LES RESERVATIONS </h1>
         <div class="lien-moderation-reservation">
-            <a href="index.php?action=AfficherModerationReservation">Modérer les réservations</a>
+            <a href="index.php?action=AfficherReservationAdmin">Modérer les réservations</a>
         </div>
     </div>
 

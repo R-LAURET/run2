@@ -37,11 +37,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if ($success) {
                 // Rediriger vers une page de confirmation ou afficher un message de succès
-                header("Location: index.php?action=reservation&&message=success");
+                header("Location: index.php?action=AfficherReservation&&message=success");
                 exit;
             } else {
                 // Afficher un message d'erreur si l'insertion a échoué
-                header("Location: index.php?action=reservation&&message=echec");
+                header("Location: index.php?action=AfficherReservation&&message=echec");
                 exit;
             }
         } else {

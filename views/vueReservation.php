@@ -8,9 +8,7 @@ $reservationManager = new ReservationManager($db);
 ?>
 <div class="reservation-back"> 
     <?php
-    if (isset($_GET['id'])) {
-        $idProprio = $_GET['id'];
-        $_SESSION['idProprio'] = $idProprio;
+        $idProprio = $_SESSION['idPropriete'];
 
         $reservations = $reservationManager->getReservationsByPropriete($idProprio);
 
@@ -30,9 +28,6 @@ $reservationManager = new ReservationManager($db);
         } else {
             echo "<p>Aucune réservation trouvée pour cette propriété.</p>";
         }
-    } else {
-        echo "<p>Identifiant de propriété non fourni.</p>";
-    }
 
     ?>
 
@@ -40,8 +35,10 @@ $reservationManager = new ReservationManager($db);
         <h2>Réserver cette propriété :</h2>
         <div class="<?php echo isset($_GET['message']) && $_GET['message'] == 'success' ? 'success' : 'error'; ?>">
             <?php
-            if (isset($_GET['message'])) {
-                echo $_GET['message'] == 'success' ? 'Réservation effectuée avec succès!' : $_GET['message'];
+            if (isset($_GET['message'])&& $_GET['message'] == 'success') {
+                echo 'Réservation effectuée avec succès!';
+            }elseif (isset($_GET['message']) && $_GET['message'] == 'echec'){
+                echo ('Veillez vérifier que votre reservation n\'est pas déjà occupé' );
             }
             ?>
         </div>

@@ -162,6 +162,12 @@ class Controller {
             case 'insererAvis':
                 $this->insererAvis();
                 break;
+            case 'AfficherReservationAdmin':
+                $this->AfficherReservationAdmin();
+                break;
+            case 'ReservationModifAdmin':
+                $this->ReservationModifAdmin();
+                break;
             default:
                 $this->AfficherAccueil();
                 break;
@@ -250,6 +256,12 @@ class Controller {
     }
     private function insererAvis(){
         include 'traitement/traitementInsererAvis.php';
+    }
+    private function AfficherReservationAdmin (){
+        include 'views/reservationAdmin.php';
+    }
+    private function ReservationModifAdmin (){
+        include 'views/ReservationModifAdmin.php';
     }
 
 }   

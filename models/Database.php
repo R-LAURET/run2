@@ -3,7 +3,7 @@ class Database {
     private $host = "localhost";
     private $utilisateur = "raphael";
     private $motDePasse = "raphael"; 
-    private $baseDeDonnees = "location_run"; 
+    private $baseDeDonnees = "location_run3"; 
     
     private $connexion;
     
