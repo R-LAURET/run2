@@ -1,0 +1,256 @@
+/* Conteneur des cartes de propriétés */
+.propriete-cartes-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Cartes de propriétés */
+.propriete-cartes {
+    width: 100%;
+    height: 500px;
+    
+}
+.cartes{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.propriete-carte{
+    background-color: #f9f9f9;
+    width: 23%;
+    height: 100%;
+    border-radius: 22px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Image de la carte de propriété */
+.propriete-carte-image  {
+    width: 100%;
+    height: 50%;
+}
+
+.propriete-carte-image img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+}
+
+/* Texte de la carte de propriété */
+.propriete-carte-text {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.propriete-carte-text h3{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 23px;
+}
+
+/* Lien "Voir plus" */
+.propriete-lien {
+  width: 50%;
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    background-color: none;
+    border: 1px solid #cccccc;
+    background-color: #000000;
+    padding: 10px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.propriete-lien:hover {
+    background-color: #eeeeee; /* Couleur de fond au survol */
+    color: rgb(0, 0, 0);
+}
+.description-proprio-carte {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Nombre de lignes à afficher avant de masquer le reste */
+    -webkit-box-orient: vertical;
+  }
+
+  /*/////////////////////////////////////////voir plus propriete */
+
+  
+.propriete-conteneur {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    height: 84vh;
+  }
+  
+  .photo {
+    width: 40%;
+    height: 60%;
+    margin-right: 20px;
+
+  }
+  
+
+  .photo img {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+
+.informations {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+  }
+  
+
+  .informations h2 {
+    font-size: 28px;
+    font-weight: bold; 
+    margin-bottom: 15px; 
+    color: #333;
+  }
+  
+
+  .informations p {
+    margin: 10px 0;
+    font-size: 20px; 
+    line-height: 1.4;
+    color: #666; 
+  }
+
+  .lien{
+    width: 40%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+  .lien a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-right: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  
+/*/////////////////////////////////////////////////////////////////////////////////
+
+/* Style pour la classe Proprietes-bg */
+.Proprietes-bg {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px auto;
+    width: 80%;
+    height: 250px;
+}
+
+/* Style pour la classe propriete */
+.propriete {
+    
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.photo-proprietes{
+  width: 30%;
+  height: 100%;
+  margin-right: 20px;
+}
+/* Style pour la classe photo */
+.photo-proprietes img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    max-width: 100%;
+}
+
+/* Style pour la classe description */
+.description{
+  width: 40%;
+  height: 100%;
+}
+.description h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.description p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Style pour la classe avis */
+.avis {
+    font-size: 14px;
+    color: #000000;
+    width: 30%;
+}
+.nom{
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.lienDesProprietes{
+  margin-top: 40px;
+  width: 60%;
+  height: 100%;
+ 
+}
+
+.lienDesProprietes a{
+  background-color: black;
+  text-decoration: none;
+  font-size: 14px;
+  color: #c9c9c9;
+  margin-right: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.rating {
+  font-size: 14px; /* Taille des étoiles */
+}
+
+.rating .star {
+  color: #FFD700; /* Couleur des étoiles */
+}
+
+.rating .star:hover {
+  cursor: pointer; /* Curseur de souris lorsqu'il survole les étoiles */
+}
+
+hr{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+}
+

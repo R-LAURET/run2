@@ -1,0 +1,59 @@
+/* Style du conteneur de l'inscription */
+.conteneur-inscription {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+}
+
+/* Style du conteneur du formulaire */
+.formulaire-conteneur-inscription {
+    text-align: center;
+}
+
+/* Style du titre du formulaire */
+.formulaire-conteneur-inscription h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Style des champs de saisie */
+.formulaire-inscription {
+    margin-bottom: 15px;
+}
+
+/* Style des libellés des champs */
+.formulaire-inscription label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Style des champs de saisie */
+.formulaire-inscription input[type="text"],
+.formulaire-inscription input[type="number"],
+.formulaire-inscription input[type="email"],
+.formulaire-inscription input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style du bouton de soumission */
+.formulaire-inscription input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Style du bouton de soumission au survol */
+.formulaire-inscription input[type="submit"]:hover {
+    background-color: #0056b3;
+}

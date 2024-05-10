@@ -1,0 +1,68 @@
+/* Style pour le formulaire */
+.back-inserer-proprio{
+    height: 89vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.formulaire-propriete {
+    background-color: #ffffff;
+    border: 1px solid #dddddd; /* Bordure grise */
+    padding: 20px; /* Espacement intérieur */
+    border-radius: 5px; /* Coins arrondis */
+    width: 30%;
+}
+
+/* Style pour les groupes de champs */
+.form-group {
+    margin-bottom: 20px; /* Espacement entre les groupes de champs */
+}
+
+/* Style pour les libellés */
+label {
+    display: block; /* Afficher les libellés sur une ligne séparée */
+    margin-bottom: 5px; /* Espacement entre les libellés et les champs */
+    font-weight: bold; /* Texte en gras */
+}
+
+/* Style pour les champs de saisie */
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%; /* Largeur maximale */
+    padding: 10px; /* Espacement intérieur */
+    border: 1px solid #cccccc; /* Bordure grise */
+    border-radius: 3px; /* Coins arrondis */
+    box-sizing: border-box; /* Inclure la bordure dans la largeur */
+}
+
+/* Style pour le bouton */
+input[type="submit"] {
+    margin: 0 auto;
+    background-color: #000000;
+    color: #ffffff; 
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 3px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    transition: background-color 0.3s; 
+}
+
+/* Style pour le bouton au survol */
+input[type="submit"]:hover {
+    background-color: #333333; /* Fond noir plus sombre au survol */
+}
+/* Style pour l'input de fichier */
+input[type="file"] {
+    width: 100%; /* Largeur maximale */
+    padding: 10px; /* Espacement intérieur */
+    border: 1px solid #cccccc; /* Bordure grise */
+    border-radius: 3px; /* Coins arrondis */
+    box-sizing: border-box; /* Inclure la bordure dans la largeur */
+    background-color: transparent; /* Fond transparent */
+    cursor: pointer; /* Curseur pointer */
+}
+

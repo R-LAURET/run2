@@ -1,0 +1,62 @@
+.conteneur-connexion{
+    width: 100vw;
+    height: 89vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.formulaire-conteneur {
+    width: 30%;
+    height: 60%;
+    background-color: #ffffff; /* Fond blanc */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.error {
+    color: #ff0000; /* Rouge pour les messages d'erreur */
+    margin-bottom: 10px;
+}
+
+.formulaire {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: 400;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="submit"] {
+    width: 100%;
+    max-width: 300px; /* Largeur maximale des champs d'entrée */
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #000000; /* Bouton noir */
+    color: #ffffff; /* Texte blanc */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #333333; /* Noir légèrement plus foncé au survol */
+}
+

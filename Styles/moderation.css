@@ -1,0 +1,189 @@
+.back-admin{
+    height: 89vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.moderation-avis{
+    background-color: white;
+    width: 30%;
+    height: 40%;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.moderation-avis h1{
+    margin-top: 40px;
+    margin-bottom: 20px;
+ 
+}
+
+.lien-moderation-avis{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.lien-moderation-avis a{
+    text-decoration: none;
+    width: 30%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+.moderation-reservation{
+    background-color: white;
+    width: 30%;
+    height: 40%;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.moderation-reservation h1{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.lien-moderation-reservation{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.lien-moderation-reservation a{
+    text-decoration: none;
+    width: auto;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+.moderation-utilisateur{
+    background-color: white;
+    width: 30%;
+    height: 40%;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.moderation-utilisateur h1{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.lien-moderation-utilisateur{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.lien-moderation-utilisateur a{
+    text-decoration: none;
+    width: 30%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+.moderation-propriete{
+    background-color: white;
+    width: 30%;
+    height: 40%;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.moderation-propriete h1{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.lien-moderation-propriete{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.lien-moderation-propriete a{
+    text-decoration: none;
+    width: 30%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////*/
+.back-avis{
+    height: 89vh;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.ligne-avis{
+    width: 85%;
+    height: auto;
+    background-color: white;
+    display: flex;
+    margin-bottom: 20px;
+}
+.contenu-avis{
+    width: 70%;
+    height: 100%;
+}
+.contenu-avis p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: rgb(32, 32, 32);
+    margin-left: 20px;
+}
+.lien-decision{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.accepter {
+    background-color: rgb(10, 122, 0);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    
+}
+.refuser{
+    background-color: rgb(255, 0, 0);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-decoration: none;
+}

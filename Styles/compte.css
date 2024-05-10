@@ -1,0 +1,140 @@
+.monCompte-bg{
+    height: 200vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.side-bar{
+    width: 20%;
+    height: 100vh;
+    background-color: rgb(43, 43, 43);
+    position: fixed;
+}
+.information-compte{
+    margin-left: 20%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+.MesProprietes{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 76%;
+    margin-left: 22%;
+    background-color: white;
+    border-radius: 22px;
+}
+
+.MesProprietes h2{
+    font-size: 32px;
+    text-align: center;
+}
+.propriete-compte{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.lien-imageUniquement{
+    width: 100%;
+    height: 20%;
+    display:flex;
+    align-items: center;
+}
+
+.lien-imageUniquement a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    background-color: black;
+    margin-bottom: 30px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+.photo-compte{
+    width: 200px;
+    height:300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.photo-compte img{
+    width: 100%;
+    height: 80%;
+    object-fit: contain;
+}
+.details-compte{
+    width: 70%;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+.details-compte p{
+    width: 80%;
+
+}
+.lien-compte{
+    width: 10%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.lien-compte a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    background-color: black;
+    margin-bottom: 30px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    margin-right: 20px;
+}
+/*/////////////////////////////////////////////////////*/
+
+.backModifImage{
+    height: 89vh;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+}
+.image-modifier{
+    width: 40%;
+    height: 50%;
+
+}
+
+.image-modifier img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.lien-imageModifier{
+    width: 100%;
+    height: 20%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lien-imageModifier a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    background-color: black;
+    margin-bottom: 30px;
+    padding: 10px;
+    width: 20%;
+    text-align: center;
+}
