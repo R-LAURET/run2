@@ -187,7 +187,30 @@ class ProprieteManager {
         }
     }
     
-    
+    public function SupprimerPropriete($idProprio){
+        try {
+            $sql1= "DELETE FROM photo WHERE idProprio = :idProprio";
+            $sql2 = "DELETE FROM propriete WHERE idProprio = :idProprio";
+            $stmt1 = $this->db->prepare($sql1);
+            $stmt2 = $this->db->prepare($sql2);
+            $stmt1->bindParam(':idProprio', $idProprio);
+            $stmt2->bindParam(':idProprio', $idProprio);
+            $res1 = $stmt1->execute();
+            $res2 = $stmt2->execute();
+
+            if ($res1 && $res2) {
+                return true;
+            }else{
+                return false;
+            }
+
+            
+
+        } catch (PDOException $e) {
+            echo "Erreur lors de la suppression de la propriété : " . $e->getMessage();
+            return false;
+        }
+    }
 
     public function getMontantProprieteById($idProprio) {
         try {

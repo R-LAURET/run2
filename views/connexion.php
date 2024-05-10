@@ -1,7 +1,7 @@
 <?php include 'views/template/header.php'; ?>
 
 <div class="conteneur-connexion">
-    <div class="formulaire-conteneur">
+    <div class="formulaire-conteneur-connexion">
         <h1>Connexion</h1>
         <div class="error">
             <?php
@@ -10,7 +10,7 @@
             }
            ?>
         </div>
-        <form method="post" action="index.php?action=ConnecterUtilisateur">
+        <form method="post" action="index.php?action=ConnecterUtilisateur" class="connexion-form">
             <div class="formulaire">
                 <label for="email">email</label>
                 <input type="email" name="email" id="email" placeholder="votre email">

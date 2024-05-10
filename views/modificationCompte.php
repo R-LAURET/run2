@@ -3,7 +3,7 @@
 include 'views/template/header.php';
 
 
-$idPropriete = $_GET['id']; 
+$idPropriete = $_GET['idProprio']; 
 $_SESSION['idProprio']= $idPropriete;
 
 include 'manager/ProprieteManager.php';
@@ -19,7 +19,7 @@ $propriete = $ProprieteManager->getProprieteById($idPropriete);
 
 <div class="conteneur-modification">
     <div class="formulaire-conteneur-modification">
-        <h1>Modification des propriétés</h1>
+        <h1>Modifier les informations de votre propriété</h1>
         <form method="post" action="index.php?action=ModifierCompte">
             <div class="formulaire-modification">
                 <label for="nom">Nom</label>

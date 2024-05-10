@@ -89,16 +89,25 @@
   
 .propriete-conteneur {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    padding: 20px;
     width: 100%;
-    height: 84vh;
+    height: 91vh;
+  }
+  .contient-photo-infos{
+    margin-top: 10%;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: left;
+  
   }
   
   .photo {
-    width: 40%;
-    height: 60%;
+    width: 100%;
+    height: 20%;
     margin-right: 20px;
 
   }
@@ -117,7 +126,8 @@
     flex: 1;
     padding: 20px;
     border-radius: 10px;
-    width: 60%;
+    width: 100%;
+    height: 70%;
   }
   
 
@@ -151,6 +161,31 @@
     margin-right: 20px;
     border: 1px solid #ccc;
     padding: 10px;
+  }
+
+  .avis-propriete{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow-y: hidden;
+    padding: 20px;
+  }
+  .propriete-avis-ligne{
+
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-y: scroll;
   }
   
   
@@ -212,6 +247,7 @@
     font-size: 14px;
     color: #000000;
     width: 30%;
+    overflow-y: scroll;
 }
 .nom{
   font-size: 16px;
@@ -252,5 +288,23 @@ hr{
   margin-top: 20px;
   margin-bottom: 10px;
   border: 1px solid #ddd;
+}
+
+.lien-donner-avis{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lien-donner-avis a{
+  background-color: #000000;
+  text-decoration: none;
+  font-size: 18px;
+  color: #ffffff;
+  margin-right: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
 }
 

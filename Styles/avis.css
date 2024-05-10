@@ -1,0 +1,105 @@
+.back-donner-avis{
+    background-color: #f2f2f2;
+    height: 89vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.photo-donner-avis{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.photo-donner-avis img{
+    width: 80%;
+    height: 40%;
+}
+.donner-avis{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.resultat-insertion-avis{
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+.sucessAvis {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.echecAvis {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.formulaire-container-avis{
+    background-color: white;
+    padding: 20px;
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.formulaire-notation {
+    margin-bottom: 20px;
+}
+
+.formulaire-notation label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.formulaire-notation textarea,
+.formulaire-notation input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.note {
+    width: 100%;
+    font-size: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.note .star {
+    cursor: pointer;
+    color: #ccc;
+}
+
+
+.envoyer-avis {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}

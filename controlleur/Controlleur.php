@@ -126,6 +126,9 @@ class Controller {
             case 'ModifierImageProprio':
                 $this->ModifierImageProprio();
                 break;
+            case 'SupprimerPropriete':
+                $this->SupprimerPropriete();
+                break;
             case 'AfficherAdministrationGlobale':
                 $this->AfficherAdministrationGlobale();
                 break;
@@ -134,6 +137,30 @@ class Controller {
                 break;
             case 'moderationAvis':
                 $this->moderationAvis();
+                break;
+            case 'AfficherModificationInfosUtilisateur':
+                $this->AfficherModificationInfosUtilisateur();
+                break;
+            case 'ModifierInfosUtilisateur':
+                $this->ModifierInfosUtilisateur();
+                break;
+            case'AfficherModificationMDP':
+                $this->AfficherModificationMDP();
+                break;
+            case 'traiterNouveauMDP':
+                $this->traiterNouveauMDP();
+                break;
+            case'AfficherInsererAvis':
+                $this->AfficherInsererAvis();
+                break;
+            case 'deconnexion':
+                session_start();
+                session_destroy();
+                header("Location: index.php?action=AfficherAccueil");
+                exit(); 
+                break;
+            case 'insererAvis':
+                $this->insererAvis();
                 break;
             default:
                 $this->AfficherAccueil();
@@ -202,6 +229,27 @@ class Controller {
     }
     private function moderationAvis() {
         include 'traitement/traitementModerationAvis.php';
+    }
+    private function SupprimerPropriete() {
+        include 'traitement/traitementSupprimerPropriete.php';
+    }
+    private function AfficherModificationInfosUtilisateur() {
+        include 'views/modificationInfosUtilisateur.php';
+    }
+    private function ModifierInfosUtilisateur() {
+        include 'traitement/traitementModificationInfosUtilisateur.php';
+    }
+    private function AfficherModificationMDP() {
+        include 'views/modificationMDP.php';
+    }
+    private function traiterNouveauMDP() {
+        include 'traitement/traitementModificationMDP.php';
+    }
+    private function AfficherInsererAvis(){
+        include 'views/insererAvis.php';
+    }
+    private function insererAvis(){
+        include 'traitement/traitementInsererAvis.php';
     }
 
 }   

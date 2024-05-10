@@ -33,5 +33,64 @@ class UtilisateurManager {
             return null; 
         }
     }
+
+    public function modifierMDP($mdpActuel,$nouveauMdp,$confirmMdp,$idUtilisateur){
+
+        $sqlMdpActuel = "SELECT mdp FROM utilisateurs WHERE idUtilisateur = :idUtilisateur";
+    
+        $requete = $this->db->prepare($sqlMdpActuel);
+
+        $requete->bindParam(':idUtilisateur', $idUtilisateur, PDO::PARAM_INT);
+
+        $requete->execute();
+
+        $resultat = $requete->fetch(PDO::FETCH_ASSOC);
+
+        if (!$resultat) {
+            return false;
+        }
+        if (!password_verify($mdpActuel, $resultat['mdp'])) {
+            return false;
+        }
+        if ($nouveauMdp !== $confirmMdp) {
+            return false;
+        }
+
+        $nouveauMdpHash = password_hash($nouveauMdp, PASSWORD_DEFAULT);
+
+        $sqlUpdateMdp = "UPDATE utilisateurs SET mdp = :nouveauMdp WHERE idUtilisateur = :idUtilisateur";
+    
+        $requeteUpdate = $this->db->prepare($sqlUpdateMdp);
+    
+        $requeteUpdate->bindParam(':nouveauMdp', $nouveauMdpHash);
+        $requeteUpdate->bindParam(':idUtilisateur', $idUtilisateur, PDO::PARAM_INT);
+    
+        if ($requeteUpdate->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+
+
+    
+    }
+
+    public function modifierInformationCompte($idUtilisateur, $nom, $prenom, $email){
+        $sql = "UPDATE utilisateurs SET nom = :nom, prenom = :prenom, email = :email WHERE idUtilisateur = :idUtilisateur";
+        $stmt =  $this->db->prepare($sql);
+        $stmt->bindParam(':nom', $nom);
+        $stmt->bindParam(':prenom', $prenom);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':idUtilisateur', $idUtilisateur, PDO::PARAM_INT);
+    
+        $resultat= $stmt->execute();
+    
+        if($resultat){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    
 }
 ?>

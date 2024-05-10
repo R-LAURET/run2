@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="Styles/compte.css">
     <link rel="stylesheet" href="Styles/insererProprio.css">
     <link rel="stylesheet" href="Styles/moderation.css">
+    <link rel="stylesheet" href="Styles/avis.css">
+    <script src="traitement/avis.js"></script>
+
 
 
     <title>Run-saison - votre plateforme de location </title>

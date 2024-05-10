@@ -8,9 +8,13 @@ include 'manager/PhotoManager.php';
 
 <div class="monCompte-bg">
     <div class="side-bar">
-        
+        <a href="#mes-proprietes">mes proprietes</a>
+        <a href="#mes-infos-compte">mes informations de compte</a>
+        <a href="#securité">sécurité</a>
+        <a href="index.php?action=deconnexion">me déconnecter</a>
+
     </div>
-    <div class="MesProprietes">
+    <div class="MesProprietes" id= "mes-proprietes">
         <h2>Mes Propriétés</h2>
         <?php
         if (isset($_SESSION['id'])) {
@@ -35,7 +39,7 @@ include 'manager/PhotoManager.php';
                         echo "<img src='" . $photo->getImage() . "' alt='Photo de la propriété'>";
                         echo "<div class='lien-imageUniquement'>";
                         // Lien pour modifier cette photo
-                        echo "<a href='index.php?action=ModificationImage&&idPropriete={$propriete->getIdProprio()}&idPhoto={$photo->getIdPhoto()}'>Modifier cette photo</a>";
+                        echo "<a class ='lien-image-btn' href='index.php?action=ModificationImage&&idPropriete={$propriete->getIdProprio()}&idPhoto={$photo->getIdPhoto()}'>Modifier cette photo</a>";
                         echo "</div>"; // fermeture de div lien-imageUniquement
                         echo "</div>"; // fermeture de div photo-compte
                         echo "<div class='details-compte'>";
@@ -47,11 +51,12 @@ include 'manager/PhotoManager.php';
                         echo "</div>"; // fermeture de div details-compte
                         echo "<div class='lien-compte'>";
                         // Lien pour modifier la propriété
-                        echo "<a href='index.php?action=AfficherModifCompte&id={$propriete->getIdProprio()}'>Modifier</a>";
+                        echo "<a class='modif-propriete-btn' href='index.php?action=AfficherModifCompte&idProprio={$propriete->getIdProprio()}'>Modifier</a>";
                         // Lien pour supprimer la propriété
-                        echo "<a href='supprimerPropriete.php?id={$propriete->getIdProprio()}'>Supprimer</a>";
+                        echo "<a class='supprime-propriete-btn' href='index.php?action=SupprimerPropriete&&idProprio={$propriete->getIdProprio()}'>Supprimer</a>";
                         echo "</div>"; // fermeture de div lien-compte
                         echo "</div>"; // fermeture de div propriete-compte
+                        echo "<hr>";
                     }
                 }
                 
@@ -64,7 +69,7 @@ include 'manager/PhotoManager.php';
         ?>
     </div>
 
-    <div class="information-compte">
+    <div class="information-compte" id="mes-infos-compte">
         <h1>MON ESPACE COMPTE </h1>
         <?php
         
@@ -79,6 +84,7 @@ include 'manager/PhotoManager.php';
                 echo "<p>Nom : {$utilisateur->getNom()}</p>";
                 echo "<p>Prénom : {$utilisateur->getPrenom()}</p>";
                 echo "<p>Email : {$utilisateur->getEmail()}</p>";
+                echo "<a class ='lien-modifier-infos' href='index.php?action=AfficherModificationInfosUtilisateur&&idUtilisateur=".$idUtilisateur."'>Modifier</a>";
             } else {
                 echo "Impossible de récupérer les informations de l'utilisateur.";
             }
@@ -86,5 +92,10 @@ include 'manager/PhotoManager.php';
             echo "Utilisateur non connecté.";
         }
         ?>
+    </div>
+    <div class="securite-compte">
+        <h1>CHANGER MON MOT DE PASSE</h1>
+        <p>*******************</P>
+        <a href="index.php?action=AfficherModificationMDP">Modifier </a>
     </div>
 </div>

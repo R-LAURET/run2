@@ -4,6 +4,11 @@ include('views/template/header.php');
 
 $idUtilisateur = $_SESSION['id'];
 
+if (!isset($_SESSION['id'])){
+    header('location: index.php?action=AfficherConnexion');
+    exit();
+}
+
 ?>
 <div class="back-inserer-proprio">
     <h2>Créer une propriété</h2>

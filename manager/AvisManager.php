@@ -75,6 +75,46 @@ class AvisManager {
             return false;
         }
     }
+    public function ajouterAvis($avis) {
+        $idPropriete = $avis->getIdProprio();
+        $idUtilisateur = $avis->getIdUtilisateur();
+        $commentaire = $avis->getCommentaire();
+        $note = $avis->getNote();
+        $date = $avis->getDate();
+        $modere = $avis->getModere();
+
+        $query = "INSERT INTO avis_moderation (idProprio, idUtilisateur, commentaire, note, date, modere) 
+                  VALUES (:id_propriete, :id_utilisateur, :commentaire, :note, :date, :modere)";
+        
+        $stmt = $this->db->prepare($query);
+        $stmt->bindParam(":id_propriete", $idPropriete);
+        $stmt->bindParam(":id_utilisateur", $idUtilisateur);
+        $stmt->bindParam(":commentaire", $commentaire);
+        $stmt->bindParam(":note", $note);
+        $stmt->bindParam(":date", $date);
+        $stmt->bindParam(":modere", $modere);
+
+        if ($stmt->execute()) {
+            return true; 
+        } else {
+            return false; 
+        }
+    }
+
+    public function getNombreAvisUtilisateurSurPropriete($idUtilisateur, $idPropriete) {
+        $query = "SELECT COUNT(*) AS nombre_avis FROM avis_moderation WHERE idUtilisateur = :id_utilisateur AND idProprio = :id_propriete";
+
+        $stmt = $this->db->prepare($query);
+        $stmt->bindParam(":id_utilisateur", $idUtilisateur);
+        $stmt->bindParam(":id_propriete", $idPropriete);
+
+        if ($stmt->execute()) {
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $row['nombre_avis'];
+        } else {
+            return false;
+        }
+    }
     
     
     
